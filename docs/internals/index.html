@@ -19,6 +19,7 @@ want to make a source code contribution.</p></div>
 <div><h2 class="text-2xl font-bold mt-10 font-display" id="software"><a href="#software">Software</a></h2></div>
 <div><p>This software is used to build/release CloudCamp for various programming languages:</p></div>
 <div><ul class="list-disc list-inside">
+<li class="py-1">standard version (<a style="color: #d63200;" href="https://www.npmjs.com/package/standard-version">https://www.npmjs.com/package/standard-version</a>)</li>
 <li class="py-1">npm (<a style="color: #d63200;" href="https://www.npmjs.com">https://www.npmjs.com</a>)</li>
 <li class="py-1">yarn (<a style="color: #d63200;" href="https://yarnpkg.com/">https://yarnpkg.com/</a>)</li>
 <li class="py-1">sponge (<a style="color: #d63200;" href="https://linux.die.net/man/1/sponge">https://linux.die.net/man/1/sponge</a>)</li>
@@ -26,19 +27,24 @@ want to make a source code contribution.</p></div>
 <li class="py-1">fswatch (<a style="color: #d63200;" href="https://github.com/emcrisostomo/fswatch">https://github.com/emcrisostomo/fswatch</a>)</li>
 <li class="py-1">twine (<a style="color: #d63200;" href="https://pypi.org/project/twine/">https://pypi.org/project/twine/</a>)</li>
 <li class="py-1">dotnet (<a style="color: #d63200;" href="https://dotnet.microsoft.com">https://dotnet.microsoft.com</a>)</li>
+<li class="py-1">maven (<a style="color: #d63200;" href="http://maven.apache.org">http://maven.apache.org</a>)</li>
 </ul></div>
 <div><h2 class="text-2xl font-bold mt-10 font-display" id="releasing"><a href="#releasing">Releasing</a></h2></div>
 <div><p>To prerelease, run:</p></div>
-<div data-language="bash" class="relative group" tabindex="0"><button class="w-6 h-6 group absolute top-3 right-3 border border-gray-300 bg-gray-100 hover:bg-gray-200 rounded-md cursor-pointer group-hover:flex hidden items-center justify-center focus:border-2 focus:border-indigo-500" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-700 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></button><div class=""><div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">git</span> checkout main
-$ <span class="token function">yarn</span> release --prerelease alpha
-$ <span class="token function">git</span> checkout release
+<div data-language="bash" class="relative group" tabindex="0"><button class="w-6 h-6 group absolute top-3 right-3 border border-gray-300 bg-gray-100 hover:bg-gray-200 rounded-md cursor-pointer group-hover:flex hidden items-center justify-center focus:border-2 focus:border-indigo-500" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-700 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></button><div class=""><div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">git</span> checkout release
 $ <span class="token function">git</span> merge main
+$ <span class="token function">yarn</span> release --prerelease alpha
+$ <span class="token function">git</span> push
+$ <span class="token function">git</span> checkout main
+$ <span class="token function">git</span> merge release
 $ <span class="token function">git</span> push</code></pre></div></div></div>
 <div><p>To release, run:</p></div>
-<div data-language="bash" class="relative group" tabindex="0"><button class="w-6 h-6 group absolute top-3 right-3 border border-gray-300 bg-gray-100 hover:bg-gray-200 rounded-md cursor-pointer group-hover:flex hidden items-center justify-center focus:border-2 focus:border-indigo-500" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-700 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></button><div class=""><div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">git</span> checkout main
-$ <span class="token function">yarn</span> release
-$ <span class="token function">git</span> checkout release
+<div data-language="bash" class="relative group" tabindex="0"><button class="w-6 h-6 group absolute top-3 right-3 border border-gray-300 bg-gray-100 hover:bg-gray-200 rounded-md cursor-pointer group-hover:flex hidden items-center justify-center focus:border-2 focus:border-indigo-500" title="Copy"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" class="w-4 h-4 text-gray-700 "><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg></button><div class=""><div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">git</span> checkout release
 $ <span class="token function">git</span> merge main
+$ <span class="token function">yarn</span> release
+$ <span class="token function">git</span> push
+$ <span class="token function">git</span> checkout main
+$ <span class="token function">git</span> merge release
 $ <span class="token function">git</span> push</code></pre></div></div></div>
 <div><h2 class="text-2xl font-bold mt-10 font-display" id="ssm-usage"><a href="#ssm-usage">SSM usage</a></h2></div>
 <div><p>This is a list of all SSM keys used internally by CloudCamp.</p></div>
